@@ -1,6 +1,6 @@
 package guru.springframework.didemo.controllers;
 
-import guru.springframework.didemo.DiDemoApplication;
+import guru.springframework.didemo.DependencyInjectionDemoApplication;
 import guru.springframework.didemo.services.GreetingServiceImpl;
 import org.junit.Before;
 import org.junit.Test;
@@ -14,14 +14,14 @@ public class SpringInjectionControllerTest {
     private SpringInjectionController springInjectionController;
 
     @Before
-    public void setUp() throws Exception {
-        ApplicationContext ctx = SpringApplication.run(DiDemoApplication.class, new String[0]);
+    public void setUp() {
+        ApplicationContext ctx = SpringApplication.run(DependencyInjectionDemoApplication.class, new String[0]);
 
         this.springInjectionController = (SpringInjectionController) ctx.getBean("springInjectionController");
     }
 
     @Test
-    public void testGreeting() throws Exception {
+    public void testGreeting() {
         assertEquals(GreetingServiceImpl.HELLO, this.springInjectionController.sayHello());
     }
 }
