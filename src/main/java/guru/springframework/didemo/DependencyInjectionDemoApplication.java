@@ -1,5 +1,7 @@
 package guru.springframework.didemo;
 
+import guru.springframework.didemo.config.FakeDataSource;
+import guru.springframework.didemo.config.FakeJmsBroker;
 import guru.springframework.didemo.controllers.*;
 import guru.springframework.didemo.services.LifeCycleDemoBean;
 import org.springframework.boot.SpringApplication;
@@ -19,5 +21,11 @@ public class DependencyInjectionDemoApplication {
         System.out.println(ctx.getBean(SetterInjectedController.class).sayHello());
         System.out.println(ctx.getBean(ConstructorInjectedController.class).sayHello());
         System.out.println(ctx.getBean(PrimaryInjectedController.class).sayHello());
+
+        FakeDataSource fakeDataSource = ctx.getBean(FakeDataSource.class);
+        System.out.println(fakeDataSource);
+
+        FakeJmsBroker fakeJmsBroker = ctx.getBean(FakeJmsBroker.class);
+        System.out.println(fakeJmsBroker);
     }
 }
