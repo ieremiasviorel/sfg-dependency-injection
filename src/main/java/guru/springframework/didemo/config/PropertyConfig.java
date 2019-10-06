@@ -11,29 +11,29 @@ import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 public class PropertyConfig {
 
     @Value("${guru.datasource.user}")
-    String user;
+    String datasourceUser;
 
     @Value("${guru.datasource.password}")
-    String password;
+    String datasourcePass;
 
     @Value("${guru.datasource.url}")
-    String url;
+    String datasourceUrl;
 
     @Value("${guru.jms.user}")
-    String jsmUser;
+    String jmsUser;
 
     @Value("${guru.jms.password}")
     String jmsPassword;
 
     @Value("${guru.jms.url}")
-    String jsmUrl;
+    String jmsUrl;
 
     @Bean
     public FakeDataSource fakeDataSource() {
         FakeDataSource fakeDataSource = new FakeDataSource();
-        fakeDataSource.setUser(user);
-        fakeDataSource.setPassword(password);
-        fakeDataSource.setUrl(url);
+        fakeDataSource.setUser(datasourceUser);
+        fakeDataSource.setPassword(datasourcePass);
+        fakeDataSource.setUrl(datasourceUrl);
 
         return fakeDataSource;
     }
@@ -41,9 +41,9 @@ public class PropertyConfig {
     @Bean
     public FakeJmsBroker fakeJmsBroker() {
         FakeJmsBroker fakeJmsBroker = new FakeJmsBroker();
-        fakeJmsBroker.setUser(user);
-        fakeJmsBroker.setPassword(password);
-        fakeJmsBroker.setUrl(url);
+        fakeJmsBroker.setUser(jmsUser);
+        fakeJmsBroker.setPassword(jmsPassword);
+        fakeJmsBroker.setUrl(jmsUrl);
 
         return fakeJmsBroker;
     }

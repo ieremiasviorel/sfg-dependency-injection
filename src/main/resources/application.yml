@@ -1,5 +1,5 @@
 guru:
   jms:
-    user: John
-    password: password
-    url: asdf
+    user: jsmUser
+    password: jmsPass
+    url: jmsUrl
