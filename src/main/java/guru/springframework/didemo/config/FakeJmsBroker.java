@@ -31,7 +31,7 @@ public class FakeJmsBroker {
 
     @Override
     public String toString() {
-        return "FakeDataSource{" +
+        return "FakeJmsBroker{" +
                 "user='" + user + '\'' +
                 ", password='" + password + '\'' +
                 ", url='" + url + '\'' +

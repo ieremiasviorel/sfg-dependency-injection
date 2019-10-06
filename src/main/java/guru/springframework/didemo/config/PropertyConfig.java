@@ -7,16 +7,16 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 
 @Configuration
-@PropertySource({"classpath:datasource.properties", "classpath:jms.properties"})
+@PropertySource({"classpath:datasource.properties"})
 public class PropertyConfig {
 
-    @Value("${guru.user}")
+    @Value("${guru.datasource.user}")
     String user;
 
-    @Value("${guru.password}")
+    @Value("${guru.datasource.password}")
     String password;
 
-    @Value("${guru.dburl}")
+    @Value("${guru.datasource.url}")
     String url;
 
     @Value("${guru.jms.user}")
@@ -50,8 +50,7 @@ public class PropertyConfig {
 
     @Bean
     public static PropertySourcesPlaceholderConfigurer properties() {
-        PropertySourcesPlaceholderConfigurer propertySourcesPlaceholderConfigurer = new PropertySourcesPlaceholderConfigurer();
-        return propertySourcesPlaceholderConfigurer;
+        return new PropertySourcesPlaceholderConfigurer();
     }
 
 }
