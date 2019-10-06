@@ -1,5 +1,14 @@
 guru:
   jms:
-    user: jsmUser
+    user: jmsUser
     password: jmsPass
     url: jmsUrl
+
+---
+spring:
+  profiles: fr
+guru:
+  jms:
+    user: fr_jmsUser
+    password: fr_jmsPass
+    url: fr_jmsPass
