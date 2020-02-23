@@ -15,7 +15,25 @@ public class GreetingServiceConfig {
         return new GreetingServiceFactory(greetingRepository);
     }
 
-    @Bean
+    @Bean("greetingServiceJavaBasedConfig")
+    @Profile({"en", "default"})
+    GreetingService englishGreetingServiceBean(GreetingServiceFactory greetingServiceFactory) {
+        return greetingServiceFactory.createGreetingService("en");
+    }
+
+    @Bean("greetingServiceJavaBasedConfig")
+    @Profile("de")
+    GreetingService germanGreetingServiceBean(GreetingServiceFactory greetingServiceFactory) {
+        return greetingServiceFactory.createGreetingService("de");
+    }
+
+    @Bean("greetingServiceJavaBasedConfig")
+    @Profile("es")
+    GreetingService spanishGreetingServiceBean(GreetingServiceFactory greetingServiceFactory) {
+        return greetingServiceFactory.createGreetingService("es");
+    }
+
+    @Bean("greetingServiceJavaBasedConfig")
     @Profile("fr")
     GreetingService frenchGreetingServiceBean(GreetingServiceFactory greetingServiceFactory) {
         return greetingServiceFactory.createGreetingService("fr");

@@ -2,6 +2,7 @@ package guru.springframework.didemo;
 
 import guru.springframework.didemo.config.FakeDataSource;
 import guru.springframework.didemo.config.FakeJmsBroker;
+import guru.springframework.didemo.controllers.JavaBasedConfigController;
 import guru.springframework.didemo.controllers.SpringInjectionController;
 import guru.springframework.didemo.controllers.diPrimary.PrimaryInjectedController;
 import guru.springframework.didemo.controllers.diProfiles.ProfileInjectedController;
@@ -42,6 +43,9 @@ public class DependencyInjectionDemoApplication {
 
         System.out.println("---- Injection based on profile");
         System.out.println(ctx.getBean(ProfileInjectedController.class).sayHello());
+
+        System.out.println("---- Injection based on Java config");
+        System.out.println(ctx.getBean(JavaBasedConfigController.class).sayHello());
 
         // Lifecycle methods demo
         ctx.getBean(LifeCycleDemoBean.class);
