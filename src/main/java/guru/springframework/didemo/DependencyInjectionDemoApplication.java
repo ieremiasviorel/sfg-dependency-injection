@@ -43,6 +43,7 @@ public class DependencyInjectionDemoApplication {
         System.out.println("---- Injection based on profile");
         System.out.println(ctx.getBean(ProfileInjectedController.class).sayHello());
 
+        // Lifecycle methods demo
         ctx.getBean(LifeCycleDemoBean.class);
 
         FakeDataSource fakeDataSource = ctx.getBean(FakeDataSource.class);
