@@ -1,5 +1,6 @@
-package guru.springframework.didemo.services;
+package guru.springframework.didemo.services.diTypes;
 
+import guru.springframework.didemo.services.GreetingService;
 import org.springframework.stereotype.Service;
 
 @Service

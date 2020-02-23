@@ -1,4 +1,4 @@
-package guru.springframework.didemo.services;
+package guru.springframework.didemo.services.lifeCycle;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;

@@ -1,4 +1,4 @@
-package guru.springframework.didemo.services;
+package guru.springframework.didemo.services.lifeCycle;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.*;
@@ -54,10 +54,10 @@ public class LifeCycleDemoBean implements InitializingBean, DisposableBean, Bean
     }
 
     public void beforeInit() {
-        System.out.println("## Post Processor -> Before Init");
+        System.out.println("## - Bean Post Processor -> Before Init");
     }
 
     public void afterInit() {
-        System.out.println("## Post Processor - After Init");
+        System.out.println("## - Bean Post Processor -> After Init");
     }
 }

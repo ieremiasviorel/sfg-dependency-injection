@@ -17,14 +17,16 @@ public class GreetingServiceImpl implements GreetingService, InitializingBean, D
         return HELLO;
     }
 
+    // from InitializingBean
+    @Override                                                                   
+    public void afterPropertiesSet() {
+        System.out.println("Bean init");
+    }
+
+    // from DisposableBean
     @Override
     public void destroy() {
         System.out.println("Bean destroy");
-    }
-
-    @Override
-    public void afterPropertiesSet() {
-        System.out.println("Bean init");
     }
 
     @PostConstruct

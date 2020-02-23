@@ -1,11 +1,10 @@
 package guru.springframework.didemo.config;
 
-import guru.springframework.didemo.services.GreetingRepository;
+import guru.springframework.didemo.repositories.GreetingRepository;
 import guru.springframework.didemo.services.GreetingService;
 import guru.springframework.didemo.services.GreetingServiceFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.Profile;
 
 @Configuration
@@ -17,9 +16,8 @@ public class GreetingServiceConfig {
     }
 
     @Bean
-    @Primary
     @Profile("fr")
-    GreetingService frenchGreetingService(GreetingServiceFactory greetingServiceFactory) {
+    GreetingService frenchGreetingServiceBean(GreetingServiceFactory greetingServiceFactory) {
         return greetingServiceFactory.createGreetingService("fr");
     }
 }

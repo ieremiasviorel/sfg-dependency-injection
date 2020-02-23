@@ -1,4 +1,4 @@
-package guru.springframework.didemo.controllers;
+package guru.springframework.didemo.controllers.diPrimary;
 
 import guru.springframework.didemo.services.GreetingService;
 import org.springframework.stereotype.Controller;
@@ -6,7 +6,7 @@ import org.springframework.stereotype.Controller;
 @Controller
 public class PrimaryInjectedController {
 
-    private GreetingService greetingService;
+    private final GreetingService greetingService;
 
     public PrimaryInjectedController(GreetingService greetingService) {
         this.greetingService = greetingService;
