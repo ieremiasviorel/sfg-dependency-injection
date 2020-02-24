@@ -7,7 +7,7 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 
 @Configuration
-@PropertySource({"classpath:datasource.properties"})
+@PropertySource({"classpath:datasource.properties", "classpath:jms.properties"})
 public class PropertyConfig {
 
     @Value("${guru.datasource.user}")
@@ -52,5 +52,4 @@ public class PropertyConfig {
     public static PropertySourcesPlaceholderConfigurer properties() {
         return new PropertySourcesPlaceholderConfigurer();
     }
-
 }

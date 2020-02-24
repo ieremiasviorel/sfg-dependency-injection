@@ -50,9 +50,11 @@ public class DependencyInjectionDemoApplication {
         // Lifecycle methods demo
         ctx.getBean(LifeCycleDemoBean.class);
 
+        System.out.println("---- External properties - datasource config");
         FakeDataSource fakeDataSource = ctx.getBean(FakeDataSource.class);
         System.out.println(fakeDataSource);
 
+        System.out.println("---- External properties - messaging config");
         FakeJmsBroker fakeJmsBroker = ctx.getBean(FakeJmsBroker.class);
         System.out.println(fakeJmsBroker);
     }

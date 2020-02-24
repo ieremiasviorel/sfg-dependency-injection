@@ -1,14 +1,16 @@
 guru:
   jms:
-    user: jmsUser
-    password: jmsPass
-    url: jmsUrl
+    user: ymlJmsUser
+    password: ymlJmsPass
+    url: ymlJmsUrl
 
+# file separator inside YML file
 ---
+
 spring:
   profiles: fr
 guru:
   jms:
-    user: fr_jmsUser
-    password: fr_jmsPass
-    url: fr_jmsPass
+    user: fr_ymlJmsUser
+    password: fr_ymlJmsPass
+    url: fr_ymlJmsPass
