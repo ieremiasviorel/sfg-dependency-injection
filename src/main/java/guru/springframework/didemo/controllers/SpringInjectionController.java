@@ -7,7 +7,7 @@ import org.springframework.stereotype.Controller;
 @Controller
 public class SpringInjectionController {
 
-    private GreetingService greetingService;
+    private final GreetingService greetingService;
 
     public SpringInjectionController(@Qualifier("greetingServiceImpl") GreetingService greetingService) {
         this.greetingService = greetingService;

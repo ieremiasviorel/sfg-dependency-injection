@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 @Profile("fr")
 public class FrenchGreetingService implements GreetingService {
 
-    private GreetingRepository greetingRepository;
+    private final GreetingRepository greetingRepository;
 
     public FrenchGreetingService(GreetingRepository greetingRepository) {
         this.greetingRepository = greetingRepository;

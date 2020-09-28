@@ -15,7 +15,7 @@ public class SpringInjectionControllerTest {
 
     @Before
     public void setUp() {
-        ApplicationContext ctx = SpringApplication.run(DependencyInjectionDemoApplication.class, new String[0]);
+        ApplicationContext ctx = SpringApplication.run(DependencyInjectionDemoApplication.class);
 
         this.springInjectionController = (SpringInjectionController) ctx.getBean("springInjectionController");
     }
